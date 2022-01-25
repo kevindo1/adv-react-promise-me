@@ -6,6 +6,8 @@ import {
   getRickAndMorty,
   fetchGenshin,
   getGenshin,
+  getNBA,
+  fetchNBA,
 } from './services/promise-me';
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
     getRickAndMorty();
     fetchGenshin();
     getGenshin();
+    fetchNBA();
+    getNBA();
   });
 
   return <h1>Hello World</h1>;

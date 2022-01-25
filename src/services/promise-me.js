@@ -49,6 +49,23 @@ export const fetchGenshin = () => {
     });
 };
 
+export async function getNBA() {
+  const resp = await fetch('https://www.balldontlie.io/api/v1/players');
+
+  const data = await resp.json();
+  console.log(data.data);
+  return data;
+}
+
+export const fetchNBA = () => {
+  return fetch('https://www.balldontlie.io/api/v1/players')
+    .then((data) => data.json())
+    .then((nbaData) => {
+      console.log(nbaData.data);
+      return nbaData;
+    });
+};
+
 /**
  * TODO:
  */
