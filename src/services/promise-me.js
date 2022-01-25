@@ -9,6 +9,15 @@ export async function getPinballMachines() {
  * TODO:
  */
 
+export const fetchPinballMachines = () => {
+  return fetch('https://ponball.herokuapp.com/api/v1/machines')
+    .then((data) => data.json())
+    .then((pinballData) => {
+      const { results } = pinballData;
+      console.log(pinballData);
+      return pinballData;
+    });
+};
 /**
  * TODO:
  */
