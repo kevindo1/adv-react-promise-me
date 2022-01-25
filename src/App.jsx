@@ -8,6 +8,8 @@ import {
   getGenshin,
   getNBA,
   fetchNBA,
+  getDogFacts,
+  fetchDogFacts,
 } from './services/promise-me';
 
 export default function App() {
@@ -20,6 +22,8 @@ export default function App() {
     getGenshin();
     fetchNBA();
     getNBA();
+    fetchDogFacts();
+    getDogFacts();
   });
 
   return <h1>Hello World</h1>;

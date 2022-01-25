@@ -66,6 +66,21 @@ export const fetchNBA = () => {
     });
 };
 
+export async function getDogFacts() {
+  const resp = await fetch('https://dog.ceo/api/breeds/image/random');
+  const data = await resp.json();
+  console.log(data);
+  return data;
+}
+
+export const fetchDogFacts = () => {
+  return fetch('https://dog.ceo/api/breeds/image/random')
+    .then((data) => data.json())
+    .then((dogData) => {
+      console.log(dogData);
+      return dogData;
+    });
+};
 /**
  * TODO:
  */
